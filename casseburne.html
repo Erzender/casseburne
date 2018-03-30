@@ -8,7 +8,7 @@
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-  <div id="app" @keydown.left='movePlatform(1)' @keyup.left='movePlatform(0)' @keydown.right='movePlatform(2)' @keyup.right='movePlatform(0)' tabindex="0">
+  <div id="app" @keydown.left='movePlatform(0, true)' @keyup.left='movePlatform(0, false)' @keydown.right='movePlatform(1, true)' @keyup.right='movePlatform(1, false)' tabindex="0">
     <div id="menuBar">Casse-burne<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
     <div id="game">
       <div id="blockMap"></div>

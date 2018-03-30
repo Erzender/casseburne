@@ -2,7 +2,7 @@ var app = new Vue({
   el: '#app',
   data: {
     width: window.innerWidth>800?800:window.innerWidth,
-    platformIsMoving: 0,
+    dirPressed: [false, false],
     platformPos: 0,
     isMobile: window.matchMedia("only screen and (max-width: 760px)").matches
   },
@@ -21,15 +21,15 @@ var app = new Vue({
       input.click();
     },
     moveEvents () {
-      if (this.platformIsMoving === 2 && this.platformPos < 300) {
+      if (this.dirPressed[1] === true && this.dirPressed[0] === false && this.platformPos < 300) {
         this.platformPos = this.platformPos + 10
       }
-      if (this.platformIsMoving === 1 && this.platformPos > -300) {
+      if (this.dirPressed[0] === true && this.dirPressed[1] === false && this.platformPos > -300) {
         this.platformPos = this.platformPos - 10
       }
     },
-    movePlatform (trigger) {
-      this.platformIsMoving = trigger
+    movePlatform (dir, value) {
+      this.dirPressed[dir] = value
     }
   },
   beforeMount(){
