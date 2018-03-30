@@ -1,3 +1,9 @@
+var myElement = document.getElementById('game');
+var mc = new Hammer(myElement);
+mc.on('press', function(ev) {
+   console.log(ev);
+ });
+
 var app = new Vue({
   el: '#app',
   data: {
