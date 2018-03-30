@@ -32,6 +32,8 @@ var app = new Vue({
     }
   },
   beforeMount(){
+    var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
+    console.log(isMobile)
     setInterval(this.moveEvents, 20)
   }
 })
