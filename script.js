@@ -14,9 +14,11 @@ var app = new Vue({
   },
   computed: {
     platformLeft: function() { return {
+      display: "flex",
       flex: 300 + this.platformPos
     }},
     platformRight: function() { return {
+      display: "flex",
       flex: 300 - this.platformPos
     }}
   },
