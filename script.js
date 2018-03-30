@@ -3,6 +3,7 @@ var app = new Vue({
   data: {
     platformIsMoving: 0,
     platformPos: 0,
+    isMobile: window.matchMedia("only screen and (max-width: 760px)").matches
   },
   computed: {
     platformStyle: function() { return {
@@ -32,8 +33,6 @@ var app = new Vue({
     }
   },
   beforeMount(){
-    var isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
-    console.log(isMobile)
     setInterval(this.moveEvents, 20)
   }
 })

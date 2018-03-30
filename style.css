@@ -14,13 +14,12 @@
   flex: 1;
   align-items: center;
   padding-left: 20px;
-  max-height: 30px;
   background-color: #AAAAAA;
 }
 
 #game {
   display: flex;
-  flex: 1;
+  flex: 9;
   align-items: center;
   justify-content: center;
 }
