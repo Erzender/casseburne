@@ -7,7 +7,6 @@ mc.on('press', function(ev) {
 var app = new Vue({
   el: '#app',
   data: {
-    width: window.innerWidth>800?800:window.innerWidth,
     dirPressed: [false, false],
     platformPos: 0,
     isMobile: window.matchMedia("only screen and (max-width: 760px)").matches
