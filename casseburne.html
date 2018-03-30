@@ -23,8 +23,8 @@
     <div id="buttons" >
       <div id="menuBarButtons">Casse-burne<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
       <div id="screen">
-        <v-touch id="leftScreen" v-on:press="movePlatform(0, true)" v-on:pressup="movePlatform(0, false)" ></v-touch>
-        <v-touch  id="rightScreen" v-on:press="movePlatform(1, true)" v-on:pressup="movePlatform(1, false)" ></v-touch>
+        <v-touch id="leftScreen" v-on:press="movePlatform(0, true)" v-on:pressup="movePlatform(0, false)" v-bind:press-options="{ time: 0 }" ></v-touch>
+        <v-touch  id="rightScreen" v-on:press="movePlatform(1, true)" v-on:pressup="movePlatform(1, false)" v-bind:press-options="{ time: 0 }" ></v-touch>
       </div>
     </div>
   </div>
