@@ -12,8 +12,6 @@
 #menuBar {
   display: flex;
   flex: 1;
-  align-items: center;
-  padding-left: 20px;
   background-color: #AAAAAA;
 }
 
@@ -45,4 +43,38 @@
   background-color: red;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+
+#buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+#menuBarButtons {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding-left: 20px;
+}
+
+#screen {
+  display: flex;
+  flex: 9;
+  flex-direction: row;
+}
+
+#leftScreen {
+  display: flex;
+  flex: 1;
+}
+
+#rightScreen {
+  display: flex;
+  flex: 1;
 }

@@ -1,11 +1,3 @@
-var myElement = document.getElementById('game');
-console.log(myElement)
-var mc = new Hammer(myElement);
-mc.on('tap', function(ev) {
-  console.log("hello")
-   console.log(ev);
- });
-
 var app = new Vue({
   el: '#app',
   data: {
@@ -39,7 +31,7 @@ var app = new Vue({
     },
     movePlatform (dir, value) {
       this.dirPressed[dir] = value
-    }
+    },
   },
   beforeMount(){
     setInterval(this.moveEvents, 20)
