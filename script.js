@@ -1,7 +1,7 @@
 var myElement = document.getElementById('game');
 console.log(myElement)
 var mc = new Hammer(myElement);
-mc.on('press', function(ev) {
+mc.on('tap', function(ev) {
    console.log(ev);
  });
 
