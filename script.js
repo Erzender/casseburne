@@ -2,6 +2,7 @@ var myElement = document.getElementById('game');
 console.log(myElement)
 var mc = new Hammer(myElement);
 mc.on('tap', function(ev) {
+  console.log("hello")
    console.log(ev);
  });
 
