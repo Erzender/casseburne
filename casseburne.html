@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
   <link rel="stylesheet" href="style.css">
   <title>Casse-burne</title>
   <script src="https://unpkg.com/vue"></script>
@@ -9,11 +11,11 @@
   <div id="app" @keydown.left='movePlatform(1)' @keyup.left='movePlatform(0)' @keydown.right='movePlatform(2)' @keyup.right='movePlatform(0)' tabindex="0">
     <div id="menuBar">Casse-burne<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
     <div id="game">
-      <div id="screen">
-        <div id="blockMap"></div>
-        <div id="platformRail">
-          <div id="platform" v-bind:style='platformStyle'></div>
-        </div>
+      <div id="blockMap"></div>
+      <div id="platformRail">
+        <div id="platformLeft" v-bind:style='platformLeft' ></div>
+        <div id="platform" ></div>
+        <div id="platformRight" v-bind:style='platformRight'></div>
       </div>
     </div>
   </div>

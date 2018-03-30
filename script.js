@@ -1,17 +1,17 @@
 var app = new Vue({
   el: '#app',
   data: {
+    width: window.innerWidth>800?800:window.innerWidth,
     platformIsMoving: 0,
     platformPos: 0,
     isMobile: window.matchMedia("only screen and (max-width: 760px)").matches
   },
   computed: {
-    platformStyle: function() { return {
-      width: "60px",
-      height: "10px",
-      backgroundColor: "red",
-      borderRadius: "5px",
-      marginLeft: this.platformPos + 270 + "px"
+    platformLeft: function() { return {
+      flex: 300 + this.platformPos
+    }},
+    platformRight: function() { return {
+      flex: 300 - this.platformPos
     }}
   },
   methods: {
@@ -21,10 +21,10 @@ var app = new Vue({
       input.click();
     },
     moveEvents () {
-      if (this.platformIsMoving === 2 && this.platformPos < 270) {
+      if (this.platformIsMoving === 2 && this.platformPos < 300) {
         this.platformPos = this.platformPos + 10
       }
-      if (this.platformIsMoving === 1 && this.platformPos > -270) {
+      if (this.platformIsMoving === 1 && this.platformPos > -300) {
         this.platformPos = this.platformPos - 10
       }
     },

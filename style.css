@@ -20,26 +20,30 @@
 #game {
   display: flex;
   flex: 9;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  background-color: #0055BB;
+  max-width: 800px;
 }
 
 #loadMap {
   margin-left: 10px
 }
 
-#screen {
-  width: 600px;
-  height: 800px;
-  background-color: #0055BB;
-}
-
 #blockMap {
-  height: 700px;
+  display: flex;
+  flex:40;
 }
 
 #platformRail {
-  height: 100px;
   display: flex;
-  align-items: flex-end;
+  flex:1;
+  flex-direction: row;
+}
+
+#platform {
+  display: flex;
+  flex: 100;
+  background-color: red;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
