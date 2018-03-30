@@ -11,7 +11,7 @@
 <body>
   <div id="app" @keydown.left='movePlatform(0, true)' @keyup.left='movePlatform(0, false)' @keydown.right='movePlatform(1, true)' @keyup.right='movePlatform(1, false)' tabindex="0">
     <div id="menuBar">Casse-burne<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
-    <div id="game" @click.down='movePlatform(0, true)' @click.up='movePlatform(0, false)'>
+    <div id="game">
       <div id="blockMap"></div>
       <div id="platformRail">
         <div id="platformLeft" v-bind:style='platformLeft' ></div>
