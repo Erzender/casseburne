@@ -3,6 +3,7 @@
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0" />
   <link rel="stylesheet" href="style.css" type="text/css">
   <title>Casse-burne</title>
   <script src="https://unpkg.com/vue"></script>
@@ -19,7 +20,7 @@
       </div>
     </div>
     <div id="buttons" >
-      <div id="menuBarButtons" class="noselect" >Casse-burne v0.2<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
+      <div id="menuBarButtons" class="noselect" >Casse-burne v0.3<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
       <div id="screen">
         <div id="leftScreen" v-on:mouseover="movePlatform(0, true)"></div>
         <div id="mid screen" v-on:mouseover="movePlatform(2, false)"></div>
