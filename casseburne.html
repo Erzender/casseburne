@@ -7,7 +7,7 @@
   <title>Casse-burne</title>
   <script src="https://unpkg.com/vue"></script>
 </head>
-<body>
+<body class="noselect">
   <div id="app" class="noselect" @keydown.left='movePlatform(0, true)' @keyup.left='movePlatform(0, false)' @keydown.right='movePlatform(1, true)' @keyup.right='movePlatform(1, false)' tabindex="0">
     <div id="menuBar"></div>
     <div id="game">
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div id="buttons" >
-      <div id="menuBarButtons" class="noselect" >Casse-burne v0.1<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
+      <div id="menuBarButtons" class="noselect" >Casse-burne v0.2<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
       <div id="screen">
         <div id="leftScreen" v-on:mouseover="movePlatform(0, true)" v-on:mouseout="movePlatform(0, false)"></div>
         <div id="rightScreen" v-on:mouseover="movePlatform(1, true)" v-on:mouseout="movePlatform(1, false)"></div>
