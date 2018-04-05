@@ -19,7 +19,7 @@
       </div>
     </div>
     <div id="buttons" >
-      <div id="menuBarButtons">Casse-burne<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
+      <div id="menuBarButtons" class="noselect" >Casse-burne<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
       <div id="screen">
         <div id="leftScreen" v-on:mouseover="movePlatform(0, true)" v-on:mouseout="movePlatform(0, false)"></div>
         <div id="rightScreen" v-on:mouseover="movePlatform(1, true)" v-on:mouseout="movePlatform(1, false)"></div>
