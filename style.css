@@ -19,7 +19,7 @@
   display: flex;
   flex: 9;
   flex-direction: column;
-  background-color: #0055BB;
+  background-color: #0055CC;
 }
 
 #loadMap {
@@ -29,6 +29,30 @@
 #blockMap {
   display: flex;
   flex:40;
+  flex-direction: column;
+}
+
+#blockLine {
+  display: flex;
+  flex: 1;
+}
+
+#block {
+  display: flex;
+  flex: 1;
+}
+
+#block.l0 {
+}
+
+#block.l1 {
+  background-color: green;
+  border-style: solid;
+}
+
+#mapFooter {
+  display: flex;
+  flex: 5;
 }
 
 #platformRail {
@@ -66,7 +90,18 @@
 #screen {
   display: flex;
   flex: 9;
+  flex-direction: column;
+}
+
+#directionScreen {
+  display: flex;
+  flex: 3;
   flex-direction: row;
+}
+
+#stopScreen {
+  display: flex;
+  flex: 1;
 }
 
 #leftScreen {
@@ -81,7 +116,7 @@
 
 #midScreen {
   display: flex;
-  flex: 1;  
+  flex: 1;
 }
 
 .noselect {

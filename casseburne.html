@@ -9,10 +9,15 @@
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body class="noselect">
-  <div id="app" class="noselect" @keydown.left='movePlatform(0, true)' @keyup.left='movePlatform(0, false)' @keydown.right='movePlatform(1, true)' @keyup.right='movePlatform(1, false)' tabindex="0">
+  <div id="app" class="noselect" @keydown.left='movePlatform(true, dirPressed[1])' @keyup.left='movePlatform(false, dirPressed[1])' @keydown.right='movePlatform(dirPressed[0], true)' @keyup.right='movePlatform(dirPressed[0], false)' tabindex="0">
     <div id="menuBar"></div>
     <div id="game">
-      <div id="blockMap"></div>
+      <div id="blockMap">
+        <div id="blockLine" v-for="line in blockMap" >
+          <div id="block" v-bind:class="'l' + block.toString()" v-for="block in line" ></div>
+        </div>
+        <div id="mapFooter"></div>
+      </div>
       <div id="platformRail">
         <div id="platformLeft" v-bind:style='platformLeft' ></div>
         <div id="platform" ></div>
@@ -20,11 +25,13 @@
       </div>
     </div>
     <div id="buttons" >
-      <div id="menuBarButtons" class="noselect" >Casse-burne v0.3<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
+      <div id="menuBarButtons" class="noselect" >Casse-burne<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
       <div id="screen">
-        <div id="leftScreen" v-on:mouseover="movePlatform(0, true)"></div>
-        <div id="mid screen" v-on:mouseover="movePlatform(2, false)"></div>
-        <div id="rightScreen" v-on:mouseover="movePlatform(1, true)"></div>
+        <div id="directionScreen">
+          <div id="leftScreen" v-on:mouseover="movePlatform(true, false)"></div>
+          <div id="rightScreen" v-on:mouseover="movePlatform(false, true)"></div>
+        </div>
+        <div id="stopScreen" v-on:mouseover="movePlatform(false, false)"></div>
       </div>
     </div>
   </div>

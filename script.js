@@ -3,7 +3,14 @@ var app = new Vue({
   data: {
     dirPressed: [false, false],
     platformPos: 0,
-    isMobile: window.matchMedia("only screen and (max-width: 760px)").matches
+    isMobile: window.matchMedia("only screen and (max-width: 760px)").matches,
+    blockMap: [
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 1, 1, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ]
   },
   computed: {
     platformLeft: function() { return {
@@ -29,13 +36,9 @@ var app = new Vue({
         this.platformPos = this.platformPos - 10
       }
     },
-    movePlatform (dir, value) {
-      if (dir === 2) {
-        this.dirPressed[0] = value
-        this.dirPressed[1] = value
-        return
-      }
-      this.dirPressed[dir] = value
+    movePlatform (left, right) {
+      this.dirPressed[0] = left
+      this.dirPressed[1] = right
     },
   },
   beforeMount(){
