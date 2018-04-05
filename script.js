@@ -30,6 +30,10 @@ var app = new Vue({
       }
     },
     movePlatform (dir, value) {
+      if (dir === 2) {
+        this.dirPressed = [value, value]
+        return
+      }
       this.dirPressed[dir] = value
     },
   },

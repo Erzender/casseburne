@@ -6,8 +6,6 @@
   <link rel="stylesheet" href="style.css" type="text/css">
   <title>Casse-burne</title>
   <script src="https://unpkg.com/vue"></script>
-  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-  <script src="vue-touch.js"></script>
 </head>
 <body>
   <div id="app" @keydown.left='movePlatform(0, true)' @keyup.left='movePlatform(0, false)' @keydown.right='movePlatform(1, true)' @keyup.right='movePlatform(1, false)' tabindex="0">
@@ -23,8 +21,8 @@
     <div id="buttons" >
       <div id="menuBarButtons">Casse-burne<button id="loadMap" v-on:click='loadMap'>Charger des burnes</button></div>
       <div id="screen">
-        <v-touch id="leftScreen" v-on:press="movePlatform(0, true)" v-on:pressup="movePlatform(0, false)" v-bind:press-options="{ time: 0 }" ></v-touch>
-        <v-touch  id="rightScreen" v-on:press="movePlatform(1, true)" v-on:pressup="movePlatform(1, false)" v-bind:press-options="{ time: 0 }" ></v-touch>
+        <div id="leftScreen" v-on:mouseover="movePlatform(0, true)" v-on:mouseout="movePlatform(0, false)"></div>
+        <div id="rightScreen" v-on:mouseover="movePlatform(1, true)" v-on:mouseout="movePlatform(1, false)"></div>
       </div>
     </div>
   </div>
